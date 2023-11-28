@@ -1,0 +1,90 @@
+<div class="text-layout">
+    <h1>Pipes Básicos</h1>
+    <p>
+        Piples incluidos en Angular - Usualmente en el Commun Module.
+    </p>
+</div>
+
+<div class="grid">
+    <div class="md:col-4">
+        <p-card header="Uppercase" [subheader]="nombreLower | uppercase">
+            {{nombreLower | uppercase}}
+        </p-card>
+    </div>
+
+    <div class="md:col-4">
+        <p-card header="lowecase" [subheader]="nombreLower | lowercase">
+            {{nombreLower | lowercase}}
+        </p-card>
+    </div>
+
+    <div class="md:col-4">
+        <p-card header="titleCase" [subheader]="nombreCompleto | titlecase">
+            {{nombreCompleto | titlecase}}
+        </p-card>
+    </div>
+</div>
+
+<div class="text-layout">
+    <h1>Date | Fecha | Pipe</h1>
+    <p>Pipe para mostrar las fechas</p>
+</div>
+
+<div class="grid">
+    <div class="md:col-6">
+        <p-card>
+            <ul>
+                <li>fecha</li>
+                <li>fecha | date</li>
+                <li>fecha | date: 'short'</li>
+                <li>fecha | date: 'long'</li>
+                <li>fecha | date: 'MMMM'</li>
+                <li>fecha | date: 'MMMM, dd, YYYY'</li>
+            </ul>
+
+            <hr>
+
+            <ul>
+                <li>fecha | date:'long':'GMT-4'</li>
+                <li>fecha | date:'shortDate':'GMT-2'</li>
+                <li>fecha | date:'long':'':'fr'</li>               
+                <li>fecha | date:'long':'':'En'</li>
+            </ul>
+        </p-card>
+    </div>
+
+    <div class="md:col-6">
+        <p-card>
+            <ul>
+                <li>{{fecha}}</li>
+                <li>{{fecha | date}}</li>
+                <li>{{fecha | date:'short'}}</li>
+                <li>{{fecha | date:'long'}}</li>
+                <li>{{fecha | date:'MMMM'}}</li>
+                <li>{{fecha | date:'MMMM, dd, YYYY '}}</li>
+            </ul>
+
+            <hr>
+
+            <ul>
+                <li>{{fecha | date:'long':'GMT-4'}}</li>
+                <li>{{fecha | date:'shortDate':'GMT-2'}}</li>
+                <li>{{fecha | date:'long':'':'fr'}}</li>       
+                <li>{{fecha | date:'long':'':'En'}}</li>
+            </ul>
+        </p-card>
+    </div>
+</div>
+
+
+
+
+<!--Dentro de PrimeNg existen pipes-->
+<p-card [header]="nombre | titlecase" subheader="Esto es el subheader">
+    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Corporis excepturi nisi porro quae ad laboriosam nostrum
+    dolores quis veritatis non quia, quod ex eaque numquam, perferendis adipisci architecto eius magni.
+</p-card>
+
+<div class="text-layout">
+    <h1>{{obj | json}}</h1>
+</div>
